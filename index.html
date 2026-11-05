@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1d3b2a">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Auto Rally</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-s="menu">
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <div>Lap <b id="lap">1/3</b></div>
+  <div>Time <b id="time">0:00.00</b></div>
+  <div>Best <b id="best">--</b></div>
+  <div>Coins <b id="coins">0</b></div>
+</div>
+<button id="mute" type="button">Sound: On</button>
+<div id="msg"></div>
+<div id="warn" hidden>Wrong way - turn around</div>
+
+<div id="pad">
+  <div class="grp">
+    <button type="button" data-k="left">Left</button>
+    <button type="button" data-k="right">Right</button>
+  </div>
+  <div class="grp">
+    <button type="button" data-k="down">Brake</button>
+    <button type="button" data-k="up" class="gas">Gas</button>
+  </div>
+</div>
+
+<section id="start" class="screen">
+  <div class="card">
+    <h1>Auto Rally</h1>
+    <p>Hold Gas and steer round the road for 3 laps: pass every checkpoint, grab coins and blue boosts, dodge the cones.</p>
+    <p class="small">Keys: arrows or WASD. Best time: <b id="best-start">--</b></p>
+    <button id="go" type="button" class="primary">Start Race</button>
+  </div>
+</section>
+
+<section id="end" class="screen" hidden>
+  <div class="card">
+    <h1>Finished</h1>
+    <p id="newbest" hidden>New best time</p>
+    <p>Your time <b id="end-time"></b></p>
+    <p>Best time <b id="end-best"></b></p>
+    <p>Coins collected <b id="end-coins"></b></p>
+    <button id="again" type="button" class="primary">Race Again</button>
+  </div>
+</section>
+
+<script src="game.js"></script>
+</body>
+</html>
