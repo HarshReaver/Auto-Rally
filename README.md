@@ -5,7 +5,7 @@ A small top-down auto-rickshaw racing game. Race 3 laps round a looping road, co
 ## Run or install
 
 - Laptop test: open the folder in a static server, for example `python -m http.server 8000`, then visit `http://localhost:8000`. (Opening `index.html` directly also plays, but the offline install needs http.)
-- GitHub Pages: push the folder contents to a repo, then Settings, Pages, deploy from the branch root. Share the `https://...github.io/...` link.
+- Play online: https://harshreaver.github.io/Auto-Rally/ (hosted on GitHub Pages from this repo's `main` branch). Share this link with friends.
 - Phone: open the link once while online, then use the browser menu, "Add to Home screen" / "Install app". After that it runs in flight mode.
 - After editing any file, change `CACHE` in `sw.js` (for example `auto-rally-v2`) so phones pick up the update.
 
@@ -36,3 +36,9 @@ A small top-down auto-rickshaw racing game. Race 3 laps round a looping road, co
 4. **The best time survives a restart.** Finish a race, fully close and reopen the app (or reload the tab). The start screen shows the same best time. A slower race does not replace it.
 5. **Fits phone screens in portrait and landscape.** Rotate the phone during the start screen and during a race; the HUD, buttons and cards stay visible and nothing scrolls.
 6. **Sound and mute.** Sounds play after you press Start Race. Press the Sound button, reload: it keeps your choice.
+
+## Tested
+
+- An autopilot drove the game loop for a full race: 3 laps in 35.05 s (about 12 s a lap). Laps only counted after every checkpoint, and the best time was still there after a reload.
+- On a 375 px wide phone screen the 4 touch buttons fit inside the screen (fixed in Prompt 2).
+- On a real Android phone: installed from the live link and played a full race in flight mode.
